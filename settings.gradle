@@ -1,0 +1,5 @@
+/*
+ * Don't forget to update this for the name of the API.
+ */
+
+rootProject.name = 'Java-API-Template'
