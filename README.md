@@ -1,2 +1,2 @@
-# Java Library Name
-Library Readme goes here.
+# JLimelight
+A Java library that wraps the Limelight API.
