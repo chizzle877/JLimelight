@@ -1,5 +1,5 @@
 # JLimelight
-A Java library that wraps the Limelight API.
+A Java library that wraps the Limelight API. This library was intended to be an easy replacement to the NetworkTables API.
 
 ## Table Of Contents
 - [JLimelight](#jlimelight)
@@ -8,7 +8,10 @@ A Java library that wraps the Limelight API.
     - [Basic Usage](#basic-usage)
 
 ## Features
-A list or other description of features this library has.
+- **Simple Implementation**: JLimelight doesn't re-invent the wheel; it uses the [Limelight NetworkTables API](http://docs.limelightvision.io/en/latest/networktables_api.html) that teams would normally use.
+- **Simple To Use**: Unlike the NetworkTables API, JLimelight was designed to be easy to use without having to reference the documentation. That is, all NetworkTables keys are wrapped in easy-to-read functions.
+- **Pure, Native Java**: Instead of pulling keys from a hash table to interface with your Limelight, you can construct a Java `Limelight` object that you can easily push and pull data from and to. Written in Java by Java developers, JLimelight takes advantage of the Java language and follows all the conventions of Java libraries. This makes for seamless integration with your Java robotics projects.
+- **Complete**: The *entire* working Limelight API is implemented in this library.
 
 ## Basic Usage
 
@@ -36,4 +39,27 @@ If you are using the Gradle Wrapper and your IDE does not download the dependenc
 
 ---
 
-Explain, with an example, how to get started with this library
+Usage of this library is simple, all you have to do is create a `Limelight` object whereever you create your subsystems. We typically do it right in our `Robot.java`, or we create a static `Subsystems` class.
+
+```java
+import net.bancino.robotics.jlimelight.Limelight;
+/* ... */
+
+Limelight limelight = new Limelight();
+```
+
+Then you can access limelight methods such as:
+
+```java
+if (limelight.hasValidTargets()) {
+    double area = limelight.getTargetArea();
+}
+```
+
+See, it's easy! If you're looking for advanced features like raw contours and crosshairs, you can create an advanced limelight object:
+
+```java
+Limelight limelight = AdvancedLimelight("limelight");
+```
+
+Make sure you check out the JavaDoc for complete usage. You can build the JavaDoc by running `gradle javadoc` (or `./gradlew javadoc` if you use Gradle Wrapper) and then reference `build/docs/javadoc/index.html`.
