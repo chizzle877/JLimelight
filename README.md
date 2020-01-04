@@ -17,8 +17,8 @@ Add this to your `settings.gradle`:
 
 ```groovy
 sourceControl {
-    gitRepository("https://github.com/Team6090/Java-API-Template") {
-        producesModule("net.bancino.robotics:Java-API-Template")
+    gitRepository("https://github.com/Team6090/JLimelight") {
+        producesModule("net.bancino.robotics:JLimelight")
     }
 }
 ```
@@ -27,7 +27,7 @@ Then, add the dependency in `build.gradle`:
 
 ```groovy
 dependencies {
-  api 'net.bancino.robotics:Java-API-Template:1.0.0'
+  api 'net.bancino.robotics:JLimelight:1.0.0'
 }
 ```
 </details>
