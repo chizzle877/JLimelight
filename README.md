@@ -15,7 +15,7 @@ A Java library that wraps the Limelight API. This library was intended to be an 
 
 ## Basic Usage
 
-<details> <summary> To include SwerveIO in your robot project </summary>
+<details> <summary> To include JLimelight in your robot project </summary>
 Add this to your `settings.gradle`:
 
 ```groovy

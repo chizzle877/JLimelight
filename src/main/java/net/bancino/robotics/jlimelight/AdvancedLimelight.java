@@ -128,11 +128,11 @@ public class AdvancedLimelight extends Limelight {
     }
 
     /**
-     * Get a raw countour value.
+     * Get a raw crosshair value.
      * 
      * @param key   The key to fetch.
      * @param index The index of the countour to retrieve. It must be within bounds
-     *              of RAW_COUNTOUR_MIN and RAW_CONTOUR_MAX.
+     *              of RAW_CROSSHAIR_MIN and RAW_CROSSHAIR_MAX.
      * @throws IllegalArgumentException If the index is out of bounds.
      * @return The value of concatenating the key and the index, provided it is in
      *         bounds.
@@ -149,7 +149,7 @@ public class AdvancedLimelight extends Limelight {
      * Raw Crosshair X in normalized screen space.
      * 
      * @param i The index of the countour to retrieve. It must be within bounds of
-     *          RAW_COUNTOUR_MIN and RAW_CONTOUR_MAX.
+     *          RAW_CROSSHAIR_MIN and RAW_ROSSHAIR_MAX.
      * @throws IllegalArgumentException If the index is out of bounds.
      * @return Raw Crosshair Y in normalized screen space.
      */
@@ -161,7 +161,7 @@ public class AdvancedLimelight extends Limelight {
      * Raw Crosshair Y in normalized screen space.
      * 
      * @param i The index of the countour to retrieve. It must be within bounds of
-     *          RAW_COUNTOUR_MIN and RAW_CONTOUR_MAX.
+     *          RAW_CROSSHAIR_MIN and RAW_ROSSHAIR_MAX.
      * @throws IllegalArgumentException If the index is out of bounds.
      * @return Raw Crosshair Y in normalized screen space.
      */
