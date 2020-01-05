@@ -13,13 +13,13 @@ repositories {
     jcenter()
     /* WPILib */
     maven {
-        url 'https://first.wpi.edu/FRC/roborio/maven/release/'
+        url 'https://dump.bancino.net/maven'
     }
 }
 
 dependencies {
     /* Declare dependencies here */
-    api 'edu.wpi.first.ntcore:ntcore-java:+'
+    api 'edu.wpi.first.ntcore:ntcore-java:2020.1.2'
 
     /* Use JUnit Jupiter API for testing. */
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.1'
