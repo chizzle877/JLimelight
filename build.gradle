@@ -33,7 +33,7 @@ test {
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            artifactId = 'SwerveIO'
+            artifactId = 'JLimelight'
             from components.java
         }
     }
