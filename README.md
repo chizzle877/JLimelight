@@ -31,7 +31,7 @@ Then add the dependency:
 
 ```groovy
 dependencies {
-  api 'net.bancino.robotics:Java-API-Template:x.y.z'
+  api 'net.bancino.robotics:JLimelight:x.y.z'
 }
 ```
 </details>
