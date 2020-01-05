@@ -16,21 +16,22 @@ A Java library that wraps the Limelight API. This library was intended to be an 
 ## Basic Usage
 
 <details> <summary> To include JLimelight in your robot project </summary>
-Add this to your `settings.gradle`:
+
+Add the Maven repository in `build.gradle`:
 
 ```groovy
-sourceControl {
-    gitRepository("https://github.com/Team6090/JLimelight") {
-        producesModule("net.bancino.robotics:JLimelight")
-    }
+repositories {
+  maven {
+    url 'https://dump.bancino.net/maven'
+  }
 }
 ```
 
-Then, add the dependency in `build.gradle`:
+Then add the dependency:
 
 ```groovy
 dependencies {
-  api 'net.bancino.robotics:JLimelight:1.0.0'
+  api 'net.bancino.robotics:Java-API-Template:x.y.z'
 }
 ```
 </details>
