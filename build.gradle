@@ -1,5 +1,7 @@
 plugins {
     id 'java-library'
+    id 'maven-publish'
+    id 'org.hidetake.ssh' version '2.10.1'
 }
 
 group = 'net.bancino.robotics'
@@ -26,4 +28,41 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'SwerveIO'
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url = "$buildDir/repo"
+        }
+    }
+}
+
+remotes {
+    webServer {
+        host = 'bancino.net'
+        if (project.hasProperty('sshUser')) {
+            user = project.getProperty('sshUser')
+        }
+        if (project.hasProperty('sshPass')) {
+            password = project.getProperty('sshPass')
+        }
+    }
+}
+
+task deployMaven {
+    dependsOn publish
+    doLast {
+        ssh.run {
+            session(remotes.webServer) {
+                put from: "$buildDir/repo/net", into: '/var/www/dump/maven'
+            }
+        }
+    }
 }
